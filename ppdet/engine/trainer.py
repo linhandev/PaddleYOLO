@@ -784,7 +784,7 @@ class Trainer(object):
 
             for _m in metrics:
                 _m.update(data, outs)
-
+            print(data[0])
             for key in ['im_shape', 'scale_factor', 'im_id']:
                 if isinstance(data, typing.Sequence):
                     outs[key] = data[0][key]
